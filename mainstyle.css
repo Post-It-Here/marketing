@@ -1,0 +1,69 @@
+html {
+  scroll-behavior: smooth;
+  background-color: #202020;
+}
+button {
+  background-color: #A9A9A9;
+}
+#container {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-family: 'Leckerli One', cursive;
+}
+#container a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+#container #naviagtion {
+  display: flex;
+  flex-flow: row;
+  position: fixed;
+  width: 80%;
+  justify-content: space-evenly;
+  background-color: #202020;
+}
+#container #naviagtion li {
+  margin: 20px;
+}
+#container #naviagtion li a:hover {
+  color: #fe4019;
+}
+#container #home {
+  display: flex;
+  flex-flow: column;
+  align-content: space-between;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+#container #home #title {
+  margin-bottom: 13%;
+  margin-top: 13%;
+  font-size: 1.5rem;
+}
+#container #home #title h1 {
+  font-size: 5rem;
+  margin-bottom: 2%;
+}
+#container #home .button {
+  background-color: #505050;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#container #home .button:hover {
+  background-color: #fe4019;
+}
+#container section {
+  margin-bottom: 40%;
+}

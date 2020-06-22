@@ -3,6 +3,12 @@
 @reddit-orange: #fe4019;
 @font-robo: 'Roboto', sans-serif;
 @font-leck: 'Leckerli One', cursive;
+@mobile: ~"(max-width: 500px)";
+@tablet: ~"(max-width: 800px)";
+
+#imgSize(width, height){
+    
+}
 html{
     scroll-behavior: smooth;
 
@@ -35,10 +41,11 @@ html{
         text-align: center;
         color: @txt-color;
         font-family: @font-leck;
+
         a{
             text-decoration: none;
             color: @txt-color;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             
         }
         h2{
@@ -66,14 +73,29 @@ html{
             align-content: space-between;
             height: 100%;
             font-family: @font-robo;
+            @media @tablet{
+                margin-top: 10%;
+            }
+
             #title{
                 margin-bottom: 10%;
                 margin-top: 6%;
-                font-size: 1.5rem;
-                h1{
-                    font-size: 5rem;
-                    margin-bottom: 2%;
-                }            
+                font-size: 2.5rem; 
+                @media @tablet{
+                    img{
+                        content: url(images/Banner-Mobile.png);
+                        margin-bottom: 10%;
+                    }
+                    margin-top: 0;
+                    font-size: 2rem;
+                }
+                @media @mobile{
+                    img{
+                        margin-bottom: 10%;
+                    }
+                    margin-bottom: 30%;
+
+                }        
             }
 
             .button {
@@ -81,16 +103,19 @@ html{
                 border: none;
                 border-radius: 5px;
                 color: white;
-                padding: 15px 32px;
+                padding: 15px 64px;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
-                font-size: 2rem;
-                margin: 4px 2px;
+                font-size: 4rem;
+                margin: 4px 6px;
                 cursor: pointer;
                 transition: all 0.5s;
                 &:hover{
                     background-color: @reddit-orange;
+                }
+                @media @mobile{
+                    padding: 15px 32px;
                 }
               }
               .button span {
@@ -110,7 +135,7 @@ html{
               }
               
               .button:hover span {
-                padding-right: 25px;
+                padding-right: 55px;
               }
               
               .button:hover span:after {

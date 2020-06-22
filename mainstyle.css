@@ -31,7 +31,7 @@ html #container {
 html #container a {
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 html #container h2 {
   font-size: 5rem;
@@ -58,31 +58,55 @@ html #container #home-page {
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
+@media (max-width: 800px) {
+  html #container #home-page {
+    margin-top: 10%;
+  }
+}
 html #container #home-page #title {
   margin-bottom: 10%;
   margin-top: 6%;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
-html #container #home-page #title h1 {
-  font-size: 5rem;
-  margin-bottom: 2%;
+@media (max-width: 800px) {
+  html #container #home-page #title {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  html #container #home-page #title img {
+    content: url(images/Banner-Mobile.png);
+    margin-bottom: 10%;
+  }
+}
+@media (max-width: 500px) {
+  html #container #home-page #title {
+    margin-bottom: 30%;
+  }
+  html #container #home-page #title img {
+    margin-bottom: 10%;
+  }
 }
 html #container #home-page .button {
   background-color: #505050;
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 64px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 2rem;
-  margin: 4px 2px;
+  font-size: 4rem;
+  margin: 4px 6px;
   cursor: pointer;
   transition: all 0.5s;
 }
 html #container #home-page .button:hover {
   background-color: #fe4019;
+}
+@media (max-width: 500px) {
+  html #container #home-page .button {
+    padding: 15px 32px;
+  }
 }
 html #container #home-page .button span {
   cursor: pointer;
@@ -99,7 +123,7 @@ html #container #home-page .button span:after {
   transition: 0.5s;
 }
 html #container #home-page .button:hover span {
-  padding-right: 25px;
+  padding-right: 55px;
 }
 html #container #home-page .button:hover span:after {
   opacity: 1;

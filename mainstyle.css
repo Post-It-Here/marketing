@@ -1,4 +1,5 @@
 html {
+  overflow: hidden;
   scroll-behavior: smooth;
   background-color: #202020;
   /* width */
@@ -20,6 +21,35 @@ html ::-webkit-scrollbar-thumb {
 html ::-webkit-scrollbar-thumb:hover {
   background: #ff5349;
 }
+html .burger {
+  display: none;
+}
+html .burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+html .toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+html .toggle .line2 {
+  opacity: 0;
+}
+html .toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
 html #container {
   margin: 0 auto;
   width: 80%;
@@ -39,16 +69,45 @@ html #container h2 {
   letter-spacing: 0.1rem;
   margin: 5%;
 }
-html #container #naviagtion {
+@media (max-width: 800px) {
+  html #container nav .burger {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: block;
+    margin: 10px;
+  }
+}
+html #container .naviagtion {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   background-color: #202020;
 }
-html #container #naviagtion li {
+@media (max-width: 800px) {
+  html #container .naviagtion {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: #202020;
+    flex-flow: column;
+    justify-content: flex-start;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+}
+html #container .naviagtion li {
   margin: 20px;
 }
-html #container #naviagtion li a:hover {
+@media (max-width: 800px) {
+  html #container .naviagtion li {
+    margin-bottom: 25%;
+    margin-top: 5%;
+  }
+}
+html #container .naviagtion li a:hover {
   color: #fe4019;
 }
 html #container #home-page {
@@ -132,6 +191,11 @@ html #container #home-page .button:hover span:after {
 html #container #about-page {
   display: flex;
   flex-flow: column nowrap;
+}
+@media (max-width: 800px) {
+  html #container #about-page {
+    margin-top: 10%;
+  }
 }
 html #container #about-page h3 {
   margin-bottom: 2%;

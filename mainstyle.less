@@ -6,10 +6,8 @@
 @mobile: ~"(max-width: 500px)";
 @tablet: ~"(max-width: 800px)";
 
-#imgSize(width, height){
-    
-}
 html{
+    overflow: hidden;
     scroll-behavior: smooth;
 
     background-color: @bg-color;
@@ -34,6 +32,40 @@ html{
   ::-webkit-scrollbar-thumb:hover {
     background: #ff5349; 
     }
+    //
+    .burger{
+        display: none;
+    }
+    .burger div{
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px, -6px);
+    
+    }
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translate(50px);
+    
+        }
+        to{
+            opacity: 1;
+            transform: translate(0px);
+        }
+    }
+
     #container{
         margin: 0 auto;
         width: 80%;
@@ -41,7 +73,6 @@ html{
         text-align: center;
         color: @txt-color;
         font-family: @font-leck;
-
         a{
             text-decoration: none;
             color: @txt-color;
@@ -54,14 +85,40 @@ html{
             letter-spacing: 0.1rem;
             margin: 5%;
         }
-        #naviagtion{
+        @media @tablet{
+            nav .burger{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                display: block;
+                margin: 10px;
+            }
+        }
+        .naviagtion{
             display: flex;
             flex-flow: row;
             justify-content: space-around;
             background-color: #202020;
-    
+
+            @media @tablet{
+                    position: absolute;
+                    right: 0px;
+                    height: 100vh;
+                    width: 100%;
+                    background-color: #202020;
+                    flex-flow: column;
+                    justify-content: flex-start;
+                    z-index: 1;
+                    transform: translateX(100%);
+                    transition: transform 0.5s ease-in;
+            }
+
             li{
                 margin: 20px;
+                @media @tablet{
+                    margin-bottom: 25%;
+                    margin-top: 5%;
+                }
                 a:hover{
                     color: @reddit-orange;
                 }
@@ -147,6 +204,9 @@ html{
         #about-page{
             display: flex;
             flex-flow: column nowrap;
+            @media @tablet{
+                margin-top: 10%;
+            }
             h3{
                 margin-bottom: 2%;
                 font-size: 2rem;
@@ -193,10 +253,5 @@ html{
             }
 
         }
-        #how-page{
-
-        }
-
     }
-    
 }

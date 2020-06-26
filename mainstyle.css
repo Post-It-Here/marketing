@@ -212,7 +212,7 @@ html .toggle .line3 {
   justify-content: center;
 }
 #container #about-page #table .person {
-  margin: 5%;
+  margin: 3%;
   padding: 1%;
   border: 4px solid #fe4019;
   border-radius: 5px;
@@ -256,8 +256,10 @@ html .toggle .line3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 500px;
-  margin-bottom: 100vh;
+  margin-bottom: 20%;
+}
+#container #how-page div h3 {
+  font-size: 2rem;
 }
 #container #how-page div .arrow {
   box-sizing: border-box;
@@ -278,4 +280,5 @@ html .toggle .line3 {
 }
 #container #how-page div a {
   align-self: center;
+  margin-top: 5%;
 }

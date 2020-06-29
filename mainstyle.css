@@ -111,6 +111,11 @@ html .toggle .line3 {
     font-size: 3.5rem;
   }
 }
+@media (max-width: 500px) {
+  #container .naviagtion li {
+    margin-bottom: 45%;
+  }
+}
 #container .naviagtion li a:hover {
   color: #fe4019;
 }
